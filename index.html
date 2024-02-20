@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Przelicznik walut</title>
+  </head>
+  <body>
+    <div class="container">
+      <img class="img-style" src="/assets/monkey2.jpg" alt="madmonkey" />
+      <h1 class="header-style">Przelicznik walut</h1>
+      <div class="input-group">
+        <div>
+          <select id="currency">
+            <option value="EUR">Euro</option>
+            <option value="USD">US Dollar</option>
+            <option value="CHF">Swiss Franc</option>
+          </select>
+        </div>
+        <div class="input-style">
+          <input
+            type="number"
+            id="amount"
+            placeholder="Kwota (PLN)"
+            min="0"
+            step="0.01"
+          />
+        </div>
+        <button class="button-style" id="convertBtn">Przelicz</button>
+        <div id="resultContainer" class="result-container"></div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
