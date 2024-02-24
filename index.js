@@ -1,7 +1,7 @@
 document
   .getElementById("currencyForm")
   .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault();
 
     const amount = parseFloat(document.getElementById("amount").value);
 
