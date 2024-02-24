@@ -17,27 +17,31 @@
     <div class="container">
       <img class="img-style" src="/assets/monkey2.jpg" alt="madmonkey" />
       <h1 class="header-style">Przelicznik walut</h1>
-      <div class="input-group">
-        <div>
-          <select id="currency">
-            <option value="EUR">EURO</option>
-            <option value="USD">USD</option>
-            <option value="CHF">CHF</option>
-          </select>
+      <form id="currencyForm">
+        <div class="input-group">
+          <div>
+            <select id="currency" required>
+              <option value="EUR">EURO</option>
+              <option value="USD">USD</option>
+              <option value="CHF">CHF</option>
+            </select>
+          </div>
+          <div class="input-style">
+            <input
+              class="input-style"
+              type="number"
+              id="amount"
+              name="amount"
+              placeholder="Kwota (PLN)"
+              min="0.01"
+              step="0.01"
+              required
+            />
+          </div>
+          <button class="button-style" type="submit">Przelicz</button>
         </div>
-        <div class="input-style">
-          <input
-            class="input-style"
-            type="number"
-            id="amount"
-            placeholder="Kwota (PLN)"
-            min="0"
-            step="0.01"
-          />
-        </div>
-        <button class="button-style" id="convertBtn">Przelicz</button>
-        <div id="resultContainer" class="result-container"></div>
-      </div>
+      </form>
+      <div id="resultContainer" class="result-container"></div>
     </div>
     <script src="index.js"></script>
   </body>
